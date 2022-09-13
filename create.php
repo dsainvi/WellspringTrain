@@ -1,6 +1,6 @@
 <?php 
 
-include "config.php";
+include "db.php";
   
   if (isset($_POST['submit'])) {
     $trainline = $_POST['trainline'];
@@ -22,12 +22,9 @@ include "config.php";
 
 <!DOCTYPE html>
 <html>
-
 <body>
-
-<h2>Signup Form</h2>
-
-<form action="" method="POST">
+<h2>create</h2>
+<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
   <fieldset>
 
     <legend>Train Route info:</legend>
@@ -44,7 +41,7 @@ include "config.php";
     <br>
 
     operator_id  :<br>
-    <input type="text  " name="operator_id  ">
+    <input type="text  " name="operatorid  ">
     <br><br>
 
     <input type="submit" name="submit" value="submit">
